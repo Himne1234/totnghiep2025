@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lễ Tốt Nghiệp - Lời Mời</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: white;
+      text-align: center;
+      background: url('https://media.giphy.com/media/3o7aD2saalBwwftBIY/giphy.gif') center/cover no-repeat fixed;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+      top: 20%;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 0.2em;
+      text-shadow: 2px 2px 5px #000;
+    }
+
+    p {
+      font-size: 1.5em;
+      max-width: 600px;
+      margin: 0 auto 1em;
+    }
+
+    .fireworks {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay"></div>
+  <div class="content">
+    <h1>🎓 Lễ Tốt Nghiệp Khóa 24 🎓</h1>
+    <p>Trân trọng kính mời bạn đến tham dự buổi lễ tốt nghiệp cùng chúng mình!</p>
+    <p>⏰ Thời gian: 8:00, ngày 25/06/2025</p>
+    <p>📍 Địa điểm: Hội trường lớn - Học viện Ngân hàng</p>
+    <p>💌 Hãy đến và cùng lưu giữ những khoảnh khắc đáng nhớ nhé!</p>
+  </div>
+  <canvas class="fireworks"></canvas>
+
+  <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.9.4/dist/fireworks.js"></script>
+  <script>
+    const container = document.querySelector('.fireworks');
+    const fireworks = new Fireworks.default(container, {
+      autoresize: true,
+      opacity: 0.5,
+      acceleration: 1.05,
+      friction: 0.97,
+      gravity: 1.5,
+      particles: 100,
+      trace: 3,
+      explosion: 5,
+    });
+    fireworks.start();
+  </script>
+</body>
+</html>
